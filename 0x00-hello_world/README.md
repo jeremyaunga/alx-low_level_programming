@@ -1,1 +1,1 @@
-Write a script that compiles a C file and creates an executable named cisfun
+write a c program that prints exactly
