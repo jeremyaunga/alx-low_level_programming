@@ -12,19 +12,19 @@ int main(void)
 	int x;
 
 	srand(time(0));
-	x = rand() - RAND_MAX / 2;
+	x = rand() % RAND_MAX;
 
 	if (x > 0)
 	{
-		printf("%d is positive\n", x);
+		printf("%d is Positive\n", x);
 	}
 	else if (x == 0)
 	{
-		printf("%d is zero\n", x);
+		printf("%d is Zero\n", x);
 	}
 	else
 	{
-		printf("%d is negative\n", x);
+		printf("%d is Negative\n", x);
 	}
 
 	return (0);
