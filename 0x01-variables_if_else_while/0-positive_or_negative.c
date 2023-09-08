@@ -3,16 +3,16 @@
 #include <stdio.h>
 
 /**
- * main - Prints if number is positive, zero or negative
+ * main - Entry 
  *
- * Return: Always (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int x;
 
 	srand(time(0));
-	x = rand() % RAND_MAX;
+	x = rand() - RAND_MAX / 2;
 
 	if (x > 0)
 	{
