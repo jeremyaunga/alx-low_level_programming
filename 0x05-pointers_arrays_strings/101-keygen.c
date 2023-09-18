@@ -1,39 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
  * main - generates keygen.
  * Return: 0 Always.
  */
-char getRandomChar()
+int main(void)
 {
-    const char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    int index = rand() % (sizeof(charset) - 1);
-    return charset[index];
+	int r = 0, c = 0;
+	time_t t;
+
+	srand((unsigned int) time(&t));
+	while (c < 2772)
+	{
+		r = rand() % 128;
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+		printf("%c", r);
+	}
+	printf("%c\n", (2772 - c));
+	return (0);
 }
-
-void generateRandomPassword(char *password, int length)
-{
-    for (int i = 0; i < length; i++)
-    {
-        password[i] = getRandomChar();
-    }
-    password[length] = '\0';
-}
-
-int main()
-{
-
-    srand(time(NULL));
-
-    int passwordLength = 7; 
-    char password[passwordLength + 1];
-
-    generateRandomPassword(password, passwordLength);
-
-    printf("Generated Password: %s\n", password);
-
-    return 0;
-}
-
