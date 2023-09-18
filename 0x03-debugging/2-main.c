@@ -13,7 +13,7 @@ int main(void)
 
         a = 972;
         b = -98;
-        c = 0;
+        c = 982;
 
         largest = lagest_number(a, b, c);
 
